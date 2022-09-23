@@ -1,16 +1,24 @@
-const {Channels} = require('../models/models')
+const {Channels, Message} = require('../models/models')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 
 class ChannelsController {
     async getAll(req, res, next) {
         let {limit, page, title} = req.query
-        page = page || 1
         limit = limit || 9
         title = title || ''
-        let offset = page * limit - limit 
 
-        const channels = await Channels.findAndCountAll({ limit, offset, where:{title: { [Op.startsWith]: title.toLowerCase() }}})
+        const channels = await Channels.findAndCountAll({ 
+            limit, 
+            where:{
+                title: { [Op.startsWith]: title.toLowerCase() }
+            },
+            include: [
+                {
+                    model: Message
+                },
+            ]
+        })
 
         return res.json(channels)
     }

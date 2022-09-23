@@ -11,7 +11,7 @@ const User = sequelize.define('user', {
     user_name: {type: DataTypes.STRING},
     post: {type: DataTypes.STRING},
     avatar_link: {type: DataTypes.STRING},
-    online: {type: BOOLEAN}
+    online: {type: BOOLEAN, defaultValue: "false"}
 },
 {
     timestamps: false
@@ -36,25 +36,33 @@ const Friends = sequelize.define('friends', {
     timestamps: false
 })
 
+const Message = sequelize.define('message', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    text: {type: DataTypes.TEXT},
+    time: {type: DataTypes.TIME},
+},
+{
+    timestamps: false
+})
+
+const TypeFriends = sequelize.define('type_friends', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+})
+
 // Зависимости между таблицами
+ 
+User.belongsToMany(Friends, {through: TypeFriends})
+Friends.belongsToMany(User, {through: TypeFriends})
 
-User.hasMany(Channels, {
+Channels.hasMany(Message, {
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE'
-})
-// Friends принадлежит User
-Channels.belongsTo(User)
-
-// Одна сущность User содержит несколько сущностей Friends
-User.hasMany(Friends, {
-    onDelete: 'CASCADE',
-    onUpdate: 'CASCADE'
-})
-// Friends принадлежит User
-Friends.belongsTo(User)
+}),
+Message.belongsTo(Channels)
 
 module.exports = {
     User,
     Channels,
-    Friends
+    Friends,
+    Message
 }
