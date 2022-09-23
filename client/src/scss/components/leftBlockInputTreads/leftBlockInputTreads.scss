@@ -1,0 +1,21 @@
+@import '../../common/extends.scss';
+
+.leftBlockInputTreadsWrap {
+    @extend %flex-center;
+    margin-left: 22px;
+
+    .inputTreads {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        transition: 0.3s;
+        font-family: $font-family-lato;
+        font-weight: $font-w-400;
+        color: $left-text-colour;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: left;
+        margin-left: 11px;
+    }
+}

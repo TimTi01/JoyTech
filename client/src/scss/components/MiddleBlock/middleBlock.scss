@@ -1,0 +1,8 @@
+@import '../../common/extends.scss';
+@import '../../common/variables.scss';
+
+.middleBlock {
+    @extend %flex-column;
+    max-height: 800px;
+    width: 100%;
+}

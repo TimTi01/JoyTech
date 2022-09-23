@@ -1,0 +1,10 @@
+@import '../../common/extends.scss';
+
+.leftBlock {
+    box-sizing: border-box;
+    height: 801px;
+    width: 261.5px;
+    background-color: $left-block-colour;
+    opacity: 75%;
+    // padding: 0 24px 24.5px 14.5px;
+}

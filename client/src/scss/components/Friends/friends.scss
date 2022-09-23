@@ -1,0 +1,67 @@
+@import '../../common/extends.scss';
+@import '../../common/variables.scss';
+
+.friendsContainer {
+    @extend %flex-column;
+    height: 290px;
+    margin-left: 23px;
+
+    .titleWrap {
+        @extend %flex-between;
+        margin-top: 32px;
+        margin-right: 25px;
+        padding-bottom: 14px;
+
+        .title {
+            font-family: $font-family-lato;
+            font-weight: $font-w-700;
+            color: $left-title-text-colour;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        .count {
+            font-family: $font-family-lato;
+            font-weight: $font-w-700;
+            color: $left-title-text-colour;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    .listWrap {
+        max-width: 267px;
+
+        .list {
+            @extend %flex-column;
+            
+            .item {
+                @extend %flex-center;
+                margin-top: 9.5px;
+
+                .online {
+                    @extend %online-on;
+                    margin-right: 7px;
+                }
+
+                .avatar {
+                    @extend %lt-avatar;
+                    margin-right: 12px;
+
+                    .picture {
+                        @extend %lt-avatar;
+                        border-radius: 5px;
+                    }
+                }
+
+                .name {
+                    font-family: $font-family-lato;
+                    font-weight: $font-w-400;
+                    color: $left-text-colour;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

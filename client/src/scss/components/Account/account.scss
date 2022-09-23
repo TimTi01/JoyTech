@@ -1,0 +1,117 @@
+@import "../../common/extends.scss";
+@import "../../common/variables.scss";
+
+.account {
+    min-width: 201px;
+    background-color: $right-block-colour;
+
+    .avatar {
+        min-width: 201px;
+        min-height: 201px;
+
+        background-color: grey;
+    }
+
+    .accountNavWrap {
+        padding: 20px 14.5px 20px 28.5px;
+
+        .accountInfo {
+            @extend %flex-column;
+
+            .accountNameWrap {
+                @extend %flex-center;
+    
+                .accountName {
+                    font-family: $font-family-lato;
+                    font-weight: $font-w-700;
+                    color: #000000;
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-right: 5.5px;
+                    margin-bottom: 3.5px;
+                }
+    
+                .online {
+                    @extend %online-on;
+                }
+            }
+            
+            .accountPost {
+                font-family: $font-family-lato;
+                font-weight: $font-w-400;
+                color: $right-text-colour;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        .socialNetwork {
+            display: flex;
+            margin-top: 20px;
+
+            .socialIcon {
+                height: 22px;
+                width: 22px;
+                background-color: #E8E8EB;
+                border-radius: 50%;
+                @extend %flex-center;
+                justify-content: center;
+                margin-right: 6.5px;
+            }
+        }
+
+        .buttonGroup {
+            display: flex;
+            margin-top: 18.5px;
+
+            .buttonMessage {
+                background-color: $buttons-color;
+                height: 25px;
+                width: 133.5px;
+                border: 0;
+                border-radius: 5px;
+                font-family: $font-family-lato;
+                font-weight: $font-w-700;
+                font-size: 13px;
+                line-height: 16px;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                margin-right: 2.5px;
+            }
+
+            .buttonSelect {
+                background-color: $buttons-color;
+                height: 25px;
+                width: 25.5px;
+                border: 0;
+                border-radius: 5px;
+            }
+        }
+
+        .infoNav {
+            @extend %flex-column;
+            margin-top: 3px;
+            
+            .infoNavItem {
+                @extend %flex-column;
+                margin-top: 11px;
+
+                .itemTitle {
+                    font-family: $font-family-lato;
+                    font-weight: $font-w-400;
+                    color: $right-text-colour;
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+
+                .itemData {
+                    font-family: $font-family-lato;
+                    font-weight: $font-w-400;
+                    color: $middle-text-colour;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

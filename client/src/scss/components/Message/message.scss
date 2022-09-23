@@ -1,0 +1,51 @@
+@import '../../common/extends.scss';
+@import '../../common/variables.scss';
+
+.messageWrap {
+    @extend %flex-between-center;
+    height: 71.5px;
+    padding-left: 23px;
+    padding-right: 24px;
+    border-top: 1px solid #000;
+
+    .navContainer {
+        display: flex;
+
+        .navIconWrap {
+            display: flex;
+            margin-right: 20.5px;
+    
+            .fileIconWrap {
+                height: 22px;
+                width: 13.5px;
+                margin-right: 18.5px;
+            }
+    
+            .voiceIconWrap {
+                height: 21.5px;
+                width: 15.5px;
+            }
+        }
+    
+        .inputWrap {
+            margin-right: 18.5px;
+    
+            .inputMessage {
+                width: 100%;
+                border: none;
+                background-color: transparent;
+                outline: none;
+                transition: 0.3s;
+                font-family: $font-family-lato;
+                font-weight: $font-w-400;
+                color: #B5B5B5;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    .smileIconWrap {
+
+    }
+}

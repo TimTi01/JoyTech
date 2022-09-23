@@ -1,0 +1,23 @@
+@import "../../common/extends.scss";
+@import "../../common/variables.scss";
+
+.leftBlockTitleWrap {
+    @extend %flex-between;
+    align-items: center;
+    padding: 31.5px 24px 30px 26px;
+    
+    .TitleWrap__WrapTitle {
+        @extend %flex-center;
+
+        .TitleWrap__Title {
+            color: #FFFFFF;
+            font-family: $font-family-lato;
+            font-weight: $font-w-700;
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0;
+            margin-right: 5px;
+        }
+    }
+    
+}

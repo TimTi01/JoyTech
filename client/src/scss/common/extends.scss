@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+//avatar extends
+
+%lt-avatar {
+    height: 34px;
+    width: 34px;
+}
+
+//online indicators
+%online-on {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: $online-on;
+}
+
+%online-off {
+    height: 8px;
+    width: 7.5px;
+    border-radius: 50%;
+    background-color: $online-off;
+}
+
+
+// flex extends
+%flex-center {
+    display: flex;
+    align-items: center;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+%flex-column-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+%flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-between-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
