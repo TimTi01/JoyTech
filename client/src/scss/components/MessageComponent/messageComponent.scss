@@ -1,0 +1,40 @@
+@import '../../common/extends.scss';
+@import '../../common/variables.scss';
+
+.mainMessage {
+    display: flex;
+    align-items: flex-end;
+
+    .infoWrap {
+        @extend %flex-column;
+        margin-left: 11px;
+
+        .nameTimeWrap {
+            
+            .name {
+                font-family: $font-family-lato;
+                font-weight: $font-w-700;
+                color: $middle-text-colour;
+                font-size: 12px;
+                line-height: 14px;
+            }
+    
+            .time {
+                font-family: $font-family-lato;
+                font-weight: $font-w-400;
+                color: $middle-title-text-colour;
+                font-size: 12px;
+                line-height: 14px;
+                margin-left: 8px;
+            }
+        }
+    
+        .text {
+            font-family: $font-family-lato;
+            font-weight: $font-w-400;
+            color: $links-colour;
+            font-size: 13px;
+            line-height: 18px;          
+        }
+    }
+}
